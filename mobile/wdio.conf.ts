@@ -1,0 +1,2 @@
+import type { Options } from '@wdio/types';
+export const config:Options.Testrunner={runner:'local',specs:['./tests/**/*.e2e.ts'],maxInstances:1,logLevel:'info',framework:'mocha',reporters:['spec'],mochaOpts:{timeout:120000},services:[['appium',{args:{address:'127.0.0.1',port:4723}}]],capabilities:[{platformName:'Android','appium:automationName':'UiAutomator2','appium:deviceName':process.env.DEVICE_NAME||'Android','appium:app':process.env.APP_PATH||''}]};

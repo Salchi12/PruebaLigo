@@ -1,0 +1,1 @@
+export class LoginPage{get username(){return $('~Username input field')}get password(){return $('~Password input field')}get login(){return $('~Login button')}get error(){return $('~generic-error')}async login(u:string,p:string){await this.username.setValue(u);await this.password.setValue(p);await this.login.click();}}
